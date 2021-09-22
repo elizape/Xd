@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(to left, #ffc70094 0%, #bd2ac6a3 31%, #30bcae9c 100%), url(imges/Celular.jpg);;
+}
+
+header{
+    background-color: rgb(240, 240, 240);
+    display: block;
+    padding: 30px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li{
+    padding-left: 20px;
+    list-style: none;
+    font-weight: 700;
+}
+
+a{
+    color: rgb(36, 36, 36);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: black;
+    transform: scale(0.9);
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 25% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+.container{
+    margin: auto;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 7%;
+    padding: 0px 30px;
+}
+
+.container p{
+    color: white;
+    text-align: justify;
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.container img{
+    height: 300px;
+}
+
+h2{
+    color: white;
+    text-align: center;
+}
+
+.description{
+    margin: 15px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    backdrop-filter: blur(3px);
+    border: solid 1px rgba(255, 255, 255, 0.1);
+}
